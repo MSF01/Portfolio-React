@@ -1,93 +1,127 @@
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
-function Header() {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function Header({
+  scrollToSection,
+  appsRef,
+  aboutRef,
+  contactRef,
+}) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#FAFAFA] text-gray-900 shadow-md rounded-2xl max-w-4xl mx-auto mt-4 border border-gray-300">
-      <div className="flex items-center justify-between px-4 py-2">
-        {/* Logo */}
-        <div className="text-2xl font-semibold hover:opacity-90 transition duration-300 ease-in-out">
-          TechWizard Labs
-        </div>
-
-        {/* Navigation - Desktop */}
-        <nav className="hidden md:flex space-x-4">
-          <a
-            href="#"
-            className="relative text-sm group hover:text-gray-600 transition duration-300 ease-in-out"
-          >
-            Home
-            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a
-            href="#"
-            className="relative text-sm group hover:text-gray-600 transition duration-300 ease-in-out"
-          >
-            Features
-            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a
-            href="#"
-            className="relative text-sm group hover:text-gray-600 transition duration-300 ease-in-out"
-          >
-            Pricing
-            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
-          </a>
+    <header className="bg-white shadow-md">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-indigo-600">[solo org]</h1>
+        <nav className="hidden md:block">
+          <ul className="flex space-x-6">
+            <li>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-indigo-600 transition duration-300"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#apps"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(appsRef);
+                }}
+                className="text-gray-600 hover:text-indigo-600 transition duration-300"
+              >
+                Apps
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(aboutRef);
+                }}
+                className="text-gray-600 hover:text-indigo-600 transition duration-300"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(contactRef);
+                }}
+                className="text-gray-600 hover:text-indigo-600 transition duration-300"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
         </nav>
-
-        {/* Get Started Button */}
-        <a
-          href="#"
-          className="hidden md:inline-block bg-gray-800 text-white py-1 px-4 rounded-full text-sm hover:scale-105 transform transition duration-300 ease-in-out"
-        >
-          Get Started
-        </a>
-
-        {/* Mobile Menu Button */}
         <button
-          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden focus:outline-none"
+          className="md:hidden text-gray-600"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-900"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-200 text-gray-900 rounded-b-2xl px-4 py-2 space-y-2">
-          <a href="#" className="block hover:text-gray-600 transition text-sm">
-            Home
-          </a>
-          <a href="#" className="block hover:text-gray-600 transition text-sm">
-            Features
-          </a>
-          <a href="#" className="block hover:text-gray-600 transition text-sm">
-            Pricing
-          </a>
-          <a
-            href="#"
-            className="block bg-gray-800 text-white text-center py-1 px-4 rounded-full hover:scale-105 transform transition text-sm"
-          >
-            Get Started
-          </a>
-        </div>
+      {isMenuOpen && (
+        <nav className="md:hidden bg-white">
+          <ul className="flex flex-col space-y-2 px-4 py-2">
+            <li>
+              <a
+                href="#"
+                className="block text-gray-600 hover:text-indigo-600 transition duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#apps"
+                className="block text-gray-600 hover:text-indigo-600 transition duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(appsRef);
+                  setIsMenuOpen(false);
+                }}
+              >
+                Apps
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                className="block text-gray-600 hover:text-indigo-600 transition duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(aboutRef);
+                  setIsMenuOpen(false);
+                }}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="block text-gray-600 hover:text-indigo-600 transition duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(contactRef);
+                  setIsMenuOpen(false);
+                }}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
       )}
     </header>
   );
 }
-
-export default Header;
