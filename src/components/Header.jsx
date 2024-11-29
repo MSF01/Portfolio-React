@@ -12,7 +12,9 @@ export default function Header({
   return (
     <header className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-indigo-600">[solo org]</h1>
+        <h1 className="text-2xl font-bold text-indigo-600">
+          [TechWizard Labs]
+        </h1>
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             <li>
