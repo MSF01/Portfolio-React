@@ -3,7 +3,7 @@ export default function Hero({ scrollToSection, appsRef }) {
     <section className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          Welcome to [solo org]
+          Welcome to TechWizard Labs
         </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           We create innovative mobile apps that enhance your digital experience

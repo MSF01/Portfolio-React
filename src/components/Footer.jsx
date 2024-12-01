@@ -1,4 +1,4 @@
-import { siInstagram, siFacebook, siTwitter } from "simple-icons/icons";
+import { siInstagram, siFacebook, siX } from "simple-icons";
 
 export default function Footer() {
   const iconStyle = {
@@ -82,7 +82,7 @@ export default function Footer() {
                   style={iconStyle}
                 >
                   <title>Twitter</title>
-                  <path d={siTwitter.path} />
+                  <path d={siX.path} />
                 </svg>
               </a>
               <a
@@ -105,7 +105,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
           <p>
-            &copy; {new Date().getFullYear} TechWizard Labs. All rights
+            &copy; {new Date().getFullYear()} TechWizard Labs. All rights
             reserved.
           </p>
         </div>
