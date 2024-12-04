@@ -20,7 +20,7 @@ const AppShowcase = forwardRef((props, ref) => {
           {apps.map((app) => (
             <div
               key={app.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl"
+              className="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-lg hover:shadow-gray-400"
             >
               <div className="p-6">
                 <div className="text-4xl mb-4">{app.icon}</div>

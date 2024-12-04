@@ -7,7 +7,7 @@ const About = forwardRef(({ contactRef }, ref) => {
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">
           About TechWizard Labs
         </h2>
-        <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+        <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:shadow-gray-400">
           <p className="mb-4 text-gray-600">
             TechWizard Labs is a one-person mobile app development studio
             passionate about creating innovative and user-friendly applications.
@@ -29,7 +29,7 @@ const About = forwardRef(({ contactRef }, ref) => {
             us!
           </p>
           <a
-            href="mailto:example@email.com"
+            href="mailto:support@techwizardlabs.org"
             className="text-indigo-600 hover:text-indigo-800 transition duration-300"
           >
             support@techwizardlabs.org
