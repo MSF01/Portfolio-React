@@ -47,7 +47,7 @@ export default function Header({
           <h1
             className={`text-2xl font-bold transition-colors duration-300 ${textColorClass}`}
           >
-            TechWizard Labs
+            TWL
           </h1>
           <nav className="hidden md:block">
             <ul className="flex space-x-8">
