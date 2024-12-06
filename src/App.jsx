@@ -5,6 +5,8 @@ import AppShowcase from "./components/AppShowcase";
 import About from "./components/About";
 import Footer from "./components/Footer";
 
+import "./globals.css";
+
 export default function App() {
   const appsRef = useRef(null);
   const aboutRef = useRef(null);

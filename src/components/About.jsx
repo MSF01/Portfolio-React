@@ -5,23 +5,25 @@ const About = forwardRef(({ contactRef }, ref) => {
     <section ref={ref} id="about" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">
-          About TechWizard Labs
+          About [solo org]
         </h2>
         <div className="flex flex-col md:flex-row items-start justify-center gap-12">
           <div className="w-full md:w-1/4 flex justify-center">
             <div className="relative w-48 h-48">
-              <div className="absolute inset-0 bg-indigo-600 rounded-full transform rotate-6"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-full transform rotate-6"></div>
+              <div className="absolute inset-[3px] bg-white rounded-full"></div>
               <img
                 src="/dev.png"
                 alt="Developer"
-                className="relative z-10 w-full h-full rounded-full shadow-lg object-cover"
+                className="absolute inset-[6px] w-[calc(100%-12px)] h-[calc(100%-12px)] rounded-full shadow-lg object-cover z-10"
               />
+              <div className="absolute -inset-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-full animate-spin-slow"></div>
             </div>
           </div>
           <div className="w-full md:w-2/3">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <p className="mb-4 text-gray-600">
-                TechWizard Labs is a one-person mobile app development studio
+                [solo org] is a one-person mobile app development studio
                 passionate about creating innovative and user-friendly
                 applications.
               </p>
@@ -51,10 +53,10 @@ const About = forwardRef(({ contactRef }, ref) => {
           </p>
           <div className="text-center">
             <a
-              href="mailto:support@techwizardlabs.org"
+              href="mailto:info@techwizardlabs.org"
               className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition duration-300"
             >
-              support@techwizardlabs.org
+              info@techwizardlabs.org
             </a>
           </div>
         </div>
