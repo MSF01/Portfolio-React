@@ -5,7 +5,7 @@ const About = forwardRef(({ contactRef }, ref) => {
     <section ref={ref} id="about" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">
-          About [solo org]
+          About TechWizard Labs
         </h2>
         <div className="flex flex-col md:flex-row items-start justify-center gap-12">
           <div className="w-full md:w-1/4 flex justify-center">
@@ -23,7 +23,7 @@ const About = forwardRef(({ contactRef }, ref) => {
           <div className="w-full md:w-2/3">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <p className="mb-4 text-gray-600">
-                [solo org] is a one-person mobile app development studio
+                TechWizard Labs is a one-person mobile app development studio
                 passionate about creating innovative and user-friendly
                 applications.
               </p>
@@ -53,10 +53,10 @@ const About = forwardRef(({ contactRef }, ref) => {
           </p>
           <div className="text-center">
             <a
-              href="mailto:info@techwizardlabs.org"
+              href="mailto:support@techwizardlabs.org"
               className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition duration-300"
             >
-              info@techwizardlabs.org
+              support@techwizardlabs.org
             </a>
           </div>
         </div>
