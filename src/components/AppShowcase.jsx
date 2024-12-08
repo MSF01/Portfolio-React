@@ -4,8 +4,9 @@ const apps = [
   {
     id: 1,
     name: "Safely360",
-    description: "Description of Safely360",
-    icon: "📱",
+    description:
+      "Monitor loved ones’ locations in real-time with privacy protection.",
+    icon: "📍",
   },
 ];
 
